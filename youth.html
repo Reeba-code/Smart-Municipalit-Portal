@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Youth Employment Portal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 6rem;
+             z-index: 100;
+        }
+
+        header .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 75px;
+            height: 75px;
+        }
+
+        header .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            font-family: "Libre Caslon Display", serif;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        header nav a {
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            font-family: "Libre Caslon Display", serif;
+        }
+       
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+      
+        .welcome-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+.welcome-content {
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 100px;
+    margin-left: 250px;
+}
+
+p {
+    font-size: 1.8rem;
+    margin-top: -100px;
+    margin-left: 250px;
+}
+
+        
+        .first-but {
+            height: auto;
+            background-color: #ff914d;
+            color: white;
+            border: none;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            font-family: "Libre Caslon Display", serif;
+        }
+        a {
+    text-decoration: none;
+}
+
+.first-but {
+    width: 180px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: white;
+    color: #ff914d;
+    border: 2px solid #ff914d;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Libre Caslon Display", serif;
+    text-align: center;
+    display: inline-block;
+    line-height: 45px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.first-but:hover {
+    background-color: #ff914d;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.first-but:active {
+    background-color: darkorange;
+    color: white;
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+        #animated-text {
+  position: relative;
+  animation: moveAndFade 3s ease-out forwards;
+}
+
+@keyframes moveAndFade {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.get-started-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    color: #007bff;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.get-started-btn .arrow {
+    margin-left: 10px;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.get-started-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.get-started-btn:hover .arrow {
+    transform: translateX(5px);
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images-2.png" alt="logo" />
+            <a href=""> Smart Municipality Portal</a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="How.html">How it works</a>
+            <a href="Personal.html">
+                <button class="first-but">Proof of Residency</button>
+            </a>
+            <a href="details.html">
+                <button class="first-but">User</button>
+            </a>
+            <a href="admin.html">
+                <button class="first-but">Admin</button>
+            </a>
+        </nav>
+
+        <div class="hamburger-menu">
+            <svg
+            width="35px"
+            height="35px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M4 18L20 18"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+                <path
+                    d="M4 12L20 12"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+                <path
+                    d="M4 6L20 6"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </div>
+    </header>
+
+  
+    <video class="background-video" autoplay muted loop>
+        <source src="Landing Page UI.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="welcome-section">
+        <div class="welcome-content">
+            <h1>Welcome to the Youth Employment Portal</h1>
+            <p>Connecting you with the right job opportunities to jumpstart your career.</p>
+            <a href="portal.html" class="get-started-btn">
+                Get Started <span class="arrow">&#8594;</span>
+            </a>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>

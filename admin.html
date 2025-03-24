@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Municipality Admin Portal</title>
+  <style>
+    body {
+        font-family: "Libre Caslon Display", serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+        position: absolute;
+      background-color: #ff914d;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+        header {
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 6rem;
+        }
+
+        header .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 75px;
+            height: 75px;
+        }
+
+        header .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            font-family: "Libre Caslon Display", serif;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        header nav a {
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            font-family: "Libre Caslon Display", serif;
+        }
+
+        .flat-button {
+            width: 250px;
+            height: 70px;
+            border-radius: 50px;
+        }
+
+        .first-but {
+            height: auto;
+            background-color: #ff914d;
+            color: white;
+            border: none;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            font-family: "Libre Caslon Display", serif;
+        }
+        a {
+    text-decoration: none;
+}
+
+.first-but {
+    width: 180px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: white;
+    color: #ff914d;
+    border: 2px solid #ff914d;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Libre Caslon Display", serif;
+    text-align: center;
+    display: inline-block;
+    line-height: 45px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.first-but:hover {
+    background-color: #ff914d;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.first-but:active {
+    background-color: darkorange;
+    color: white;
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+        #animated-text {
+  position: relative;
+  animation: moveAndFade 3s ease-out forwards;
+}
+
+@keyframes moveAndFade {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+    .dashboard {
+      padding: 20px;
+     
+    }
+    .dashboard h1 {
+      color: #f44336;
+      margin-top: 120px;
+    }
+    .metrics {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .metric-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      text-align: center;
+    }
+    .metric-card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #555;
+    }
+    .metric-card p {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff914d;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    table th, table td {
+      padding: 12px;
+      text-align: left;
+    }
+    table th {
+      background-color: #ff914d;
+      color: white;
+    }
+    table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    table tr:hover {
+      background-color: #f1f1f1;
+    }
+    .actions button {
+      padding: 5px 10px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .actions button.approve {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .actions button.reject {
+      background-color: #ff914d;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #ff914d;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images-2.png" alt="logo" />
+            <a href=""> Smart Municipality Portal</a>
+        </div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#proof-of-residence">
+                <button class="first-but">Proof of Residency</button>
+            </a>
+            <a href="#utility-bills">
+                <button class="first-but">Utility Bills</button>
+            </a>
+          
+        </nav>
+
+        <div class="hamburger-menu">
+            <svg
+            width="35px"
+            height="35px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M4 18L20 18"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+                <path
+                    d="M4 12L20 12"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+                <path
+                    d="M4 6L20 6"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </div>
+    </header>
+
+  <section class="dashboard" id="dashboard">
+    <h1>Dashboard</h1>
+    <div class="metrics">
+      <div class="metric-card">
+        <h3>Total Requests</h3>
+        <p id="total-requests">120</p>
+      </div>
+      <div class="metric-card">
+        <h3>Approved</h3>
+        <p id="approved-requests">100</p>
+      </div>
+      <div class="metric-card">
+        <h3>Pending</h3>
+        <p id="pending-requests">20</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard" id="proof-of-residence">
+    <h1>Proof of Residence Requests</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="residence-requests">
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dashboard" id="utility-bills">
+    <h1>Utility Bills</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Resident</th>
+          <th>Service</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="utility-bills">
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    &copy; 2023 Municipality Admin Portal. All rights reserved.
+  </footer>
+
+  <script>
+    const residenceRequests = [
+      { name: "Rebaone Mokwanatle", date: "2023-10-01", status: "Pending" },
+      { name: "Moarabi Tong", date: "2023-10-02", status: "Approved" },
+      { name: "Keabetswe Masondo", date: "2023-10-03", status: "Rejected" },
+      { name: "Skabade Rakosa", date: "2023-10-04", status: "Pending" },
+    ];
+
+    const utilityBills = [
+      { resident: "Rebaone Mokwanatle", service: "Water Bill", amount: "R500", status: "Paid" },
+      { resident: "Moarabi Tong", service: "Electricity Bill", amount: "R1200", status: "Pending" },
+      { resident: "Keabetswe Masondo", service: "Gas Bill", amount: "R300", status: "Paid" },
+      { resident: "Skabade Rakosa", service: "Water Bill", amount: "R600", status: "Pending" },
+    ];
+
+    const residenceTable = document.getElementById("residence-requests");
+    residenceRequests.forEach(request => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${request.name}</td>
+        <td>${request.date}</td>
+        <td>${request.status}</td>
+        <td class="actions">
+          <button class="approve" onclick="approveRequest('${request.name}')">Approve</button>
+          <button class="reject" onclick="rejectRequest('${request.name}')">Reject</button>
+        </td>
+      `;
+      residenceTable.appendChild(row);
+    });
+
+    const utilityTable = document.getElementById("utility-bills");
+    utilityBills.forEach(bill => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${bill.resident}</td>
+        <td>${bill.service}</td>
+        <td>${bill.amount}</td>
+        <td>${bill.status}</td>
+      `;
+      utilityTable.appendChild(row);
+    });
+
+    function approveRequest(name) {
+      alert(`Approved request for ${name}`);
+    }
+
+    function rejectRequest(name) {
+      alert(`Rejected request for ${name}`);
+    }
+  </script>
+</body>
+</html>

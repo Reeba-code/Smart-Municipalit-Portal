@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Municipality Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: darkorange;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            position: absolute;
+            background-color: darkorange;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 6rem;
+            z-index: 100;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        header .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 75px;
+            height: 75px;
+        }
+
+        header .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            font-family: "Libre Caslon Display", serif;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        header nav a {
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            font-family: "Libre Caslon Display", serif;
+        }
+       
+      
+     .first-but {
+            height: auto;
+            background-color: #ff914d;
+            color: white;
+            border: none;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            font-family: "Libre Caslon Display", serif;
+        }
+        a {
+    text-decoration: none;
+}
+
+.first-but {
+    width: 180px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: white;
+    color: #ff914d;
+    border: 2px solid #ff914d;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Libre Caslon Display", serif;
+    text-align: center;
+    display: inline-block;
+    line-height: 45px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.first-but:hover {
+    background-color: #ff914d;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.first-but:active {
+    background-color: darkorange;
+    color: white;
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+        #animated-text {
+  position: relative;
+  animation: moveAndFade 3s ease-out forwards;
+}
+
+@keyframes moveAndFade {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: #ff914d;
+            font-size: 28px;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 10px auto;
+        }
+        em {
+            color: red;
+            font-weight: bold;
+        }
+        ul {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007b3d;
+            background: #dcedc8;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .whatsapp {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #25D366;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 100px;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            text-align: center;
+            background-color: darkorange;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px auto;
+        }
+        .qr-code {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images-2.png" alt="logo" />
+            <a href=""> Smart Municipality Portal</a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="How.html">How it works</a>
+            <a href="Personal.html">
+                <button class="first-but">Proof of Residency</button>
+            </a>
+            <a href="details.html">
+                <button class="first-but">User</button>
+            </a>
+            <a href="admin.html">
+                <button class="first-but">Admin</button>
+            </a>
+        </nav>
+
+        <div class="hamburger-menu">
+            <svg
+            width="35px"
+            height="35px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M4 18L20 18"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+                <path
+                    d="M4 12L20 12"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+                <path
+                    d="M4 6L20 6"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>How Our Smart Portal Works:</h1>
+        <p>Welcome to the Smart Municipality Portal! Our goal is to provide residents with a seamless and secure way to manage municipal services and access important documents like proof of residence.</p>
+        <p>Do you live in the Mafikeng municipality? Have you faced challenges getting your proof of residence from the municipality? If the answer is YES, you are in the right place.</p>
+        
+        <ul style="display: flex; justify-content: space-between; list-style-type: none; padding: 0;">
+            <li style="text-align: center; width: 30%;">
+                <div><img src="account.webp" alt="Scan QR Code" width="150"></div>
+                <b>Create Your Account</b> 
+               
+            </li>
+            <li style="text-align: center; width: 30%;">
+                <div><img src="qr.png" alt="Scan QR Code" width="150"></div>
+                <b>Verify Your Identity</b>
+                <br>
+               
+            </li>
+            <li style="text-align: center; width: 30%;">
+                <div><img src="bill.png" alt="Bill Icon" width="150px" height="150px"></div>
+                <b>Water and Electricity Bills</b>
+                
+            </li>
+        </ul>
+        
+        <div>
+            <br><p>Creating an account on a portal involves registering your personal information, such as email and password, to gain access to its features and services.</p>
+            <br>The portal will automatically check if you have any outstanding bills.
+                <br><em>Payment Status: If you owe any money, you won’t be able to access your proof of residence until all bills are paid.</em>
+        </div>
+        <div class="footer">Secure | Authorized | Available Anytime</div>
+        <div class="whatsapp">
+            WhatsApp Coming Soon! <i class="fa-brands fa-whatsapp"></i>
+        </div>   
+    </div>
+</body>
+</html>
